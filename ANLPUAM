@@ -1,0 +1,29 @@
+//LDR sensor-based Automatic Night Light Project using Arduino Microcontroller
+//LDR MODULE Connections
+//connect 5V from Arduino to one leg of LDR.
+//Connect another leg of LDR to a 10K resistor and further connect it to the analog pin A0 of Arduino.
+// Connect another end of the 10k resistor to the GND of Arduino and the circuit is Done.
+// updated code to fetch the data with time on serial monitor (dated 3 AUG 2022)
+void setup() { Serial.begin(9600); pinMode(13,OUTPUT); pinMode(12,OUTPUT);
+}
+void loop() {
+{
+float sensorValue = analogRead(A0);
+// Reads the analog input ranging from 0 to 1023
+//Serial.println(sensorValue);
+if(sensorValue<= 400) // more the value, LED will keep glowing in brighter exposure. {
+digitalWrite(13,HIGH);
+digitalWrite(12,HIGH);
+Serial.println("LED ON");
+delay(2000);//two-second delay of time between readings.
+// add this delay to avoid fluctuating signals during the natural transitions from dark to light
+and vice-versa due to sunlight. }
+else
+digitalWrite(13,LOW);
+digitalWrite(12,LOW);
+Serial.println("LED OFF"); //Serial Monitor Display is optional
+delay(2000);//two-second delay of time between readings.
+// a little delay here is advisable otherwise relay switch may damage non-LED AC bulbs with
+fluctuations during natural transitions from day to night due to sunlight. }
+//delay(2000);// even more delay of 2 seconds is optional.
+}
