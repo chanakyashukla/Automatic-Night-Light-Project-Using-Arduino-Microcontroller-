@@ -24,7 +24,13 @@ The Arduino code reads the analogue input from the LDR and activates the LED whe
 - Serial monitor output is available for monitoring.
 
 ## License
-This project is provided under [license details, if applicable].
+This project is provided under the Creative Commons License.
 
-Feel free to modify and adapt the code for your specific needs!
+Diary Number 22925/2022-CO/SW 
+
+AUTOMATIC NIGHT LIGHT PROJECT USING ARDUINO MICROCONTROLLER
+
+Computer Software
+
+Copyright © 2023 Chanakya Shukla. All rights reserved.
 
